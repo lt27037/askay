@@ -28,32 +28,30 @@ const Footer = () => {
 
   useEffect(
     () => {
-      getData('footer').then(data => setContent(data));
-      getData('footer-socials').then(data => setSocials(data));
+      getData('footer-data').then(data => setContent(data));
+      getData('social-medias').then(data => setSocials(data));
     },
     []
   )
 
-  console.log(socials);
-
   return(
   <>
-    <section className="footer__wrapper">
+    <section className="footer__wrapper" id={'kontakt'}>
       <Contact />
       <footer className="footer">
         <h2 className="footer__title">Skontaktuj się z nami.</h2>
         <h3 className="footer__subtitle">Askay Studio</h3>
         <section className="footer__department">
           <h3 className="footer__department__name">Dział Graficzny</h3>
-          <span className="footer__department__text">{content?.sectionPerson1 || null}</span>
-          <span className="footer__department__text">{content?.sectionEmail1 || null}</span>
-          <span className="footer__department__text">{content?.sectionPhone1 || null}</span>
+          <span className="footer__department__text">{content?.personName1|| null}</span>
+          <span className="footer__department__text">{content?.personEmail1 || null}</span>
+          <span className="footer__department__text">{content?.personNumber1 || null}</span>
         </section>
         <section className="footer__department">
           <h3 className="footer__department__name">Dział Marketingu</h3>
-          <span className="footer__department__text">{content?.sectionPerson2 || null}</span>
-          <span className="footer__department__text">{content?.sectionEmail2 || null}</span>
-          <span className="footer__department__text">{content?.sectionPhone2 || null}</span>
+          <span className="footer__department__text">{content?.personName2|| null}</span>
+          <span className="footer__department__text">{content?.personEmail2 || null}</span>
+          <span className="footer__department__text">{content?.personNumber2 || null}</span>
         </section>
         <h3 className="footer__subtitle">Social Media</h3>
         <section className="footer__social">

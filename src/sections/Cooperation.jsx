@@ -12,7 +12,7 @@ const Cooperation = () => {
 
   useEffect(
     () => {
-      getData('partnership').then(data => setContent(data))
+      getData('colaboration').then(data => setContent(data))
     },
     []
   )
@@ -25,9 +25,9 @@ const Cooperation = () => {
     <p className="cooperation__text">{content?.content || null}</p>
     <Button content="Napisz do nas" />
     <div className="cooperation__stepWrapper">
-      <p className="cooperation__step">{content?.step1 || null}</p>
-      <p className="cooperation__step">{content?.step2 || null}</p>
-      <p className="cooperation__step">{content?.step3 || null}</p>
+      <p className="cooperation__step">{content?.stepOne || null}</p>
+      <p className="cooperation__step">{content?.stepTwo|| null}</p>
+      <p className="cooperation__step">{content?.stepThree || null}</p>
     </div>
     <img
       src={illustration}

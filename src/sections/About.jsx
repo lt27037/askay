@@ -27,7 +27,7 @@ const About = () => {
   )
 
   return (
-    <div className="about" ref={about}>
+    <div className="about" ref={about} id={'o-nas'}>
       <img src={askayNapis} alt="" className="about__backgroundImg" />
       <div className="about__textWrapper">
         <h2 className="about__title">
@@ -40,15 +40,15 @@ const About = () => {
       <div className="about__wrapper">
         <span className="about__data">
           <h3 className="about__data__title">projektów</h3>
-          <span className="about__data__value">+{content?.projectsNumber || 103}</span>
+          <span className="about__data__value">+{content?.projectsQty || 103}</span>
         </span>
         <span className="about__data">
           <h3 className="about__data__title">Współprac</h3>
-          <span className="about__data__value">+{content?.cooperationsNumber || 34}</span>
+          <span className="about__data__value">+{content?.cooperationsQty || 34}</span>
         </span>
         <span className="about__data">
           <h3 className="about__data__title">Zadowolonych klientów</h3>
-          <span className="about__data__value">+{content?.clientsNumber || 67}</span>
+          <span className="about__data__value">+{content?.clientsQty || 67}</span>
         </span>
       </div>
     </div>

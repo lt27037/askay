@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
+
 
 import { ReactComponent as Logo } from '../images/Askay-logo-final 1.svg';
 
@@ -31,13 +33,13 @@ const Header = () => {
             <NavLink to="/portfolio">Portfolio</NavLink>
           </li>
           <li className="mainHeader__menu__item">
-            <NavLink to="/oferta">Oferta</NavLink>
+            <HashLink smooth to="/#oferta">Oferta</HashLink>
           </li>
           <li className="mainHeader__menu__item">
-            <NavLink to="/o-nas">O nas</NavLink>
+            <HashLink smooth to="/#o-nas">O nas</HashLink>
           </li>
           <li className="mainHeader__menu__item">
-            <NavLink to="/kontakt">Kontakt</NavLink>
+            <HashLink smooth to="/#kontakt">Kontakt</HashLink>
           </li>
         </ul>
       </nav>

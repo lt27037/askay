@@ -14,7 +14,7 @@ const Portfolio = () => {
   useEffect(
     () => {
       getData('portfolio-categories').then(data => setData(data));
-
+      window.scrollTo(0, 0);
     },
     []
   );
@@ -36,7 +36,6 @@ const Portfolio = () => {
     },
     [data]
   )
-  console.log(photos)
 
   const breakpointColumnsObj = {
     default: 4,

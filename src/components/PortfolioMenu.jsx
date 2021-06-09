@@ -12,7 +12,7 @@ const PortfolioMenu = ({data}) => {
       {
         data && (
           data?.map(category => (
-            <li className="portfolioMenu__item">
+            <li className="portfolioMenu__item" key={category.name}>
               <NavLink to={`/portfolio/${category.name}`} exact>
                 {category.name}
               </NavLink>

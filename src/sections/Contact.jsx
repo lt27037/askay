@@ -1,7 +1,4 @@
-import React, { useState, useLayoutEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
-
-import axios from 'axios';
+import React, { useState, useRef } from 'react';
 
 import Button from '../components/Button';
 
@@ -24,42 +21,9 @@ const Contact = () => {
   const handleDeadline = (e) => setDeadline(e.target.value);
   const handleBudgetMin = (e) => setBudgetMin(e.target.value);
   const handleBudgetMax = (e) => setBudgetMax(e.target.value);
-  const handleContent = (e) => setBudgetMax(e.target.value);
+  const handleContent = (e) => setContent(e.target.value);
 
   const contact = useRef(null);
-  const location = useLocation();
-
-  const sendData = async () => {
-    const formData = {
-      firstName,
-      lastName,
-      email,
-      type,
-      deadline,
-      budgetMin,
-      budgetMax,
-      content
-    };
-
-    axios({
-        method: 'POST',
-        url: '',
-        data: formData,
-    })
-    .then(({status}) => console.log(status))
-    .catch(err => console.error(err))
-
-  }
-
-
-  useLayoutEffect(
-    () => {
-      if (location.pathname === '/kontakt') contact.current?.scrollIntoView();
-      console.log(location.pathname);
-      console.log(contact.current);
-    },
-    [location],
-  );
 
   return (
     <section className="contact" ref={contact}>

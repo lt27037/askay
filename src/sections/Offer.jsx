@@ -20,13 +20,13 @@ const Offer = () => {
 
   useEffect(
     () => {
-      getData('dziedzinies').then(data => setIndustries(data));
+      getData('industries').then(data => setIndustries(data));
     },
     []
   );
 
   return (
-    <section className="offer" ref={offer}>
+    <section className="offer" ref={offer} id={'oferta'}>
       <h2 className="offer__title">
         Czym się
         <span> zajmujemy?</span>
@@ -34,7 +34,7 @@ const Offer = () => {
       <div className="offer__wrapper">
         {
           industries && (
-            industries?.map(item => <SingleOffer key={item.id} offer={item} />)
+            industries?.map(item => <SingleOffer key={item._id} offer={item} />)
           )
         }
       </div>

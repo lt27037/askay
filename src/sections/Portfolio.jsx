@@ -15,8 +15,6 @@ const Portfolio = () => {
     []
   );
 
-  console.log(content)
-
   return(
   <section className="portfolio">
     <div className="portfolio__container">
@@ -33,7 +31,7 @@ const Portfolio = () => {
     <div className="portfolio__wrapper">
       <div className="portfolio__item">
         <img
-          src={content?.imgTop.url}
+          src={content?.topImg.url}
           alt="zdjęcie z portfolio"
           className="portfolio__item__img"
           loading="lazy"
@@ -41,7 +39,7 @@ const Portfolio = () => {
       </div>
       <div className="portfolio__item">
         <img
-          src={content?.imgLeftTop.url}
+          src={content?.leftTopImg.url}
           alt="zdjęcie z portfolio"
           className="portfolio__item__img"
           loading="lazy"
@@ -49,7 +47,7 @@ const Portfolio = () => {
       </div>
       <div className="portfolio__item">
         <img
-          src={content?.imgLeftBottom.url}
+          src={content?.leftBottomImg.url}
           alt="zdjęcie z portfolio"
           className="portfolio__item__img"
           loading="lazy"
@@ -57,7 +55,7 @@ const Portfolio = () => {
       </div>
       <div className="portfolio__item">
         <img
-          src={content?.imgRight.url}
+          src={content?.rightImg.url}
           alt="zdjęcie z portfolio"
           className="portfolio__item__img"
           loading="lazy"
