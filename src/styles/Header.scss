@@ -1,0 +1,122 @@
+@import 'variables';
+
+.mainHeader{
+  @include elementFlex(row, space-between, center);
+  width: 100%;
+  height: 70px;
+  padding: 15px 5%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999 !important;
+  background: #fff;
+  &__menu{
+    position: fixed;
+    z-index: 100;
+    &__item{
+      padding: 10px 0;
+      a{
+        text-decoration: none;
+        color: $fontColor;
+        font-size: 30px;
+      }
+      a.active{
+        color: $mainColor;
+      }
+    }
+    &__list{
+      transition: transform .2s ease-in-out;
+      @include elementFlex(column, center, center);
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      right: -100%;
+      top: 0;
+      background-color: #fff;
+      font-size: 3rem;
+      list-style: none;
+    }
+  }
+  &__logo{
+    width: 154px;
+    z-index: 999;
+  }
+  &__menuButton{
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    border-style: none;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    span{
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      width: 30px;
+      height: 3.6px;
+      background: $fontColor;
+      font-size: 0px;
+      color: transparent;
+      border-style: none;
+      border-radius: 99px;
+      &::after,
+      &::before{
+        left: 0;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 99px;
+      }
+      &::after{
+        top: 0;
+        transform: translateY(-10px);
+        background: $mainColor;
+      }
+      &::before{
+        bottom: 0;
+        transform: translateY(10px);
+        background: $fontColor;
+      }
+    }
+  }
+}
+
+@media(min-width: 1050px){
+  .mainHeader{
+    padding: 20px 5%;
+    height: 80px;
+    &__menuButton{
+      display: none;
+    }
+    &__menu{
+      @include elementFlex(row, flex-end, center);
+      position: static;
+      &__list{
+        @include elementFlex(row, flex-end, center);
+        list-style: none;
+        position: static;
+        width: auto;
+        height: auto;
+        right: initial;
+      }
+      &__item{
+        padding: 1rem 1.5rem;
+        a{
+          text-decoration: none;
+          color: $fontColor;
+          font-weight: 500;
+          text-transform: uppercase;
+          font-size: 15px;
+        }
+        a.active{
+          color: $mainColor;
+        }
+      }
+      
+    }
+  }
+}

@@ -1,0 +1,126 @@
+@import 'variables';
+
+.start{
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 2rem;
+  width: 100%;
+  padding: 100px 0 50px 0;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  &__backgroundImage{
+    position: absolute;
+    top: -20px;
+    left: 2px;
+    z-index: -1;
+  }
+  &__titleWrapper{
+    @include elementFlex(column, center, flex-start);
+    @include gridPosition(1, 1);
+    width: 100%;
+    padding: 0 7%;
+  }
+  &__title{
+    font-size: 3.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 4rem;
+    span{
+      color: $mainColor;
+    }
+  }
+  &__subtitle{
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: 500;
+    span{
+      color: $mainColor;
+    }
+  }
+  &__ilustracja{
+    @include gridPosition(1, 2);
+    @include selfPosition(center, center);
+    width: 381.51px;
+    height: 253.31px;
+  }
+  &__buttonWrapper{
+    @include elementFlex(column, space-around, center);
+    @include gridPosition(1, 3);
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media(min-width: 1150px){
+  
+}
+
+@media(min-width: 1150px){
+  .start{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: initial;
+    padding: 0 5%;
+    background-image: url(../images/start-section-background.png);
+    background-position: top left;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    &__titleWrapper{
+      position: relative;
+    }
+    &__backgroundImage{
+      display: none;
+    }
+    &__title{
+      font-size: 4rem;
+      position: absolute;
+      top: -3rem;
+      width: 150%;
+    }
+    &__titleWrapper{
+      @include gridPosition(1, 1);
+      @include selfPosition(start, end);
+      justify-content: flex-end;
+      padding: 0;
+    }
+    &__buttonWrapper{
+      @include gridPosition(1, 2);
+      @include elementFlex(row, flex-start, flex-start);
+      width: auto;
+      height: auto;
+      padding: 0;
+      margin-top: 2rem;
+      button{
+        margin-right: 2rem;
+      }
+    }
+    &__ilustracja{
+      @include selfPosition(center, center);
+      grid-column: 2;
+      grid-row: 1 / 3;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media(min-width: 1850px){
+  .start{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    &__title{
+      font-size: 5.3rem;
+      position: absolute;
+      top: -3rem;
+      width: 150%;
+    }
+    &__subtitle{
+      font-size: 2.4rem;
+    }
+    &__ilustracja{
+      width: 992px;
+      height: 632.59px;
+    }
+  }
+}

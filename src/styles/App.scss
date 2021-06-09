@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import 'variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  font-size: 62.5%;
+  // scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+
+.appContainer{
+  @include elementFlex(column, flex-start, center);
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media(min-width: 1500px){
+  :root{
+    font-size: 70%;
+  }
+}
+
+@media(min-width: 1850px){
+  :root{
+    font-size: 80%;
+  }
+}

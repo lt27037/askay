@@ -1,0 +1,23 @@
+// Colors
+$mainColor: #FF6666;
+$background: #FFFFFF;
+$fontColor: #1D1D1B;
+$purple: #ACB5FC;
+
+// mixins
+@mixin elementFlex($direction, $justify, $align){
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin selfPosition($justify, $align){
+  justify-self: $justify;
+  align-self: $align;
+}
+
+@mixin gridPosition($column, $row){
+  grid-row: $row;
+  grid-column: $column;
+}
