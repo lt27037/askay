@@ -6,6 +6,7 @@ import askayNapis from '../images/napis-askay.png';
 import illustration from '../images/Illustracja_about_desktop.png';
 
 import '../styles/About.scss';
+import Loader from '../components/Loader';
 
 const About = () => {
   const about = useRef(null);
@@ -34,7 +35,7 @@ const About = () => {
           <span>Kim </span>
           jesteśmy?
         </h2>
-        <p className="about__text">{content?.content}</p>
+        <p className="about__text">{content?.content || <Loader />}</p>
       </div>
       <img src={illustration} alt="illustracja zespołu" className="about__img" />
       <div className="about__wrapper">

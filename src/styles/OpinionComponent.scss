@@ -12,14 +12,17 @@
   grid-template-rows: 2rem 1fr;
   position: relative;
   row-gap: 1rem;
-  margin: 3rem 0;
+  margin: 50px auto;
   &__avatar{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     border-radius: 50%;
-    border: 15px solid #ffffff; 
+    border: 10px solid #ffffff; 
   }
   &__name{
     font-weight: 600;

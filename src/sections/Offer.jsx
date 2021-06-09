@@ -5,6 +5,7 @@ import getData from '../getData';
 import SingleOffer from '../components/SingleOffer';
 
 import '../styles/Offer.scss';
+import Loader from '../components/Loader';
 
 const Offer = () => {
   const offer = useRef(null);
@@ -33,9 +34,11 @@ const Offer = () => {
       </h2>
       <div className="offer__wrapper">
         {
-          industries && (
+          industries 
+          ? (
             industries?.map(item => <SingleOffer key={item._id} offer={item} />)
           )
+          : <Loader />
         }
       </div>
     </section>
