@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import {HashLink} from 'react-router-hash-link';
 
 import getDate from '../getData';
 import Button from '../components/Button';
@@ -26,7 +27,9 @@ const Portfolio = () => {
       <p className="portfolio__discription">
         {content?.content || <Loader />}
       </p>
-      <Button content="Zobacz więcej" />
+      <HashLink to={'/portfolio/#wszystkie'} className={'portfolio__link'}>
+        <Button content="Zobacz więcej" />
+      </HashLink>
     </div>
     <h2 className="portfolio__title mobile">Nasze Realizacje</h2>
     {

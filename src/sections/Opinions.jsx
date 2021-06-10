@@ -6,6 +6,7 @@ import getData from '../getData';
 
 import '../styles/Opinions.scss';
 import 'react-alice-carousel/lib/scss/alice-carousel.scss';
+import Loader from '../components/Loader';
 
 const responsivePartners = {
   0: {
@@ -82,12 +83,18 @@ const Opinions = () => {
     </h2>
     <h3 className="opinions__subtitle">Dowiedz się, co sądza o nas Klienci.</h3>
     <div className="opinions__wrapper">
-      <AliceCarousel
-        items={itemsOpinions}
-        responsive={responsiveOpinions}
-        mouseTracking
-        infinite
-      />
+      {
+        opinions
+        ? (
+          <AliceCarousel
+            items={itemsOpinions}
+            responsive={responsiveOpinions}
+            mouseTracking
+            infinite
+          />
+        )
+        : <Loader />
+      }
     </div>
   </section>
 );}

@@ -14,7 +14,7 @@
     position: fixed;
     z-index: 100;
     &__item{
-      padding: 10px 0;
+      padding: 7px 0;
       a{
         text-decoration: none;
         color: $fontColor;
@@ -104,7 +104,7 @@
         right: initial;
       }
       &__item{
-        padding: 1rem 1.5rem;
+        padding: 8px 1.5rem;
         a{
           text-decoration: none;
           color: $fontColor;

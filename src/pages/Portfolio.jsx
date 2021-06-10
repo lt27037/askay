@@ -22,29 +22,42 @@ const Portfolio = () => {
     []
   );
 
+  const handleSetPhotos = (data) => {
+    if(data){
+      const arr = data?.map(category => {
+        const images = category.images?.map(image => (
+          <img src={image?.formats?.small?.url || image.url} alt="element protfolio" key={image.url} loading="lazy" className="portfolioPage__image" />
+        ))
+        return {
+          name: category.name,
+          images,
+        }
+      })
+      setPhotos(arr);
+    }
+  }
+
   useEffect(
     () => {
-      if(data){
-        const arr = data?.map(category => {
-          const images = category.images?.map(image => (
-            <img src={image?.formats?.small?.url || image.url} alt="element protfolio" key={image.url} className="portfolioPage__image" />
-          ))
-          return {
-            name: category.name,
-            images,
-          }
-        })
-        setPhotos(arr);
-      }
+      handleSetPhotos(data);
     },
     [data]
   )
 
   useEffect(
     () => {
-      console.log(location.pathname);
+      const name = location.hash.substr(1);
+      if(name === 'wszystkie'){
+        handleSetPhotos(data);
+
+      } else {
+        if(name !== ''){
+          const photos = data.filter(category => category.name === name);
+          handleSetPhotos(photos);
+        }
+      }
     },
-    [location.pathname]
+    [location.hash, data]
   )
 
   const breakpointColumnsObj = {

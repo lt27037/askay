@@ -1,16 +1,16 @@
 import React, { useRef, useEffect } from 'react';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import napis from '../images/napis-askay.png';
 import ilustracja from '../images/Illustracja-desktop.png';
 import Button from '../components/Button';
 
 import '../styles/Start.scss';
+import { HashLink } from 'react-router-hash-link';
 
 const Start = () => {
   const start = useRef(null);
   const location = useLocation();
-  const history = useHistory();
 
   useEffect(
     () => {
@@ -34,8 +34,12 @@ const Start = () => {
       </div>
       <img src={ilustracja} alt="ilustracja zespołu" className="start__ilustracja" />
       <div className="start__buttonWrapper">
-        <Button content="Napisz do nas" click={() => history.push({ pathname: '/kontakt' })} />
-        <Button content="Portfolio" click={() => history.push({ pathname: '/portfolio' })} />
+        <HashLink to={'/#kontakt'} smooth>
+          <Button content="Napisz do nas" />
+        </HashLink>
+        <HashLink to={'/portfolio/#wszystkie'}>
+          <Button content="Portfolio" />
+        </HashLink>
       </div>
     </section>
   );

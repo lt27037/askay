@@ -30,16 +30,16 @@ const Header = () => {
             <NavLink to="/" exact>Strona Główna</NavLink>
           </li>
           <li className="mainHeader__menu__item">
-            <NavLink to="/portfolio">Portfolio</NavLink>
+            <NavLink to="/portfolio/#wszystkie">Portfolio</NavLink>
           </li>
           <li className="mainHeader__menu__item">
-            <HashLink smooth to="/#oferta">Oferta</HashLink>
+            <HashLink to="/#oferta">Oferta</HashLink>
           </li>
           <li className="mainHeader__menu__item">
-            <HashLink smooth to="/#o-nas">O nas</HashLink>
+            <HashLink to="/#o-nas">O nas</HashLink>
           </li>
           <li className="mainHeader__menu__item">
-            <HashLink smooth to="/#kontakt">Kontakt</HashLink>
+            <HashLink to="/#kontakt">Kontakt</HashLink>
           </li>
         </ul>
       </nav>

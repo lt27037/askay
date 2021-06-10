@@ -90,6 +90,11 @@
     display: grid;
     grid-template-columns: repeat(2, 50%);
     padding: 10rem 5%;
+    &__link{
+      width: 100%;
+      @include elementFlex(row, center, center);
+      text-decoration: none;
+    }
     &__title{
       @include gridPosition(2, 1);
       margin: 0;

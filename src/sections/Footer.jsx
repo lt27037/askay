@@ -11,6 +11,7 @@ import behance from '../images/icons/behance-brands.svg';
 import linkedin from '../images/icons/linkedin-in-brands.svg';
 
 import '../styles/Footer.scss';
+import Loader from '../components/Loader';
 
 const icons = {
   'facebook': facebook,
@@ -36,37 +37,45 @@ const Footer = () => {
   return(
     <>
       <footer className="footer" id={'kontakt'} >
-        <h2 className="footer__title">Skontaktuj się z nami.</h2>
-        <h3 className="footer__subtitle">Askay Studio</h3>
-        <section className="footer__department">
-          <h3 className="footer__department__name">Dział Graficzny</h3>
-          <span className="footer__department__text">{content?.personName1|| null}</span>
-          <span className="footer__department__text">{content?.personEmail1 || null}</span>
-          <span className="footer__department__text">{content?.personNumber1 || null}</span>
-        </section>
-        <section className="footer__department">
-          <h3 className="footer__department__name">Dział Marketingu</h3>
-          <span className="footer__department__text">{content?.personName2|| null}</span>
-          <span className="footer__department__text">{content?.personEmail2 || null}</span>
-          <span className="footer__department__text">{content?.personNumber2 || null}</span>
-        </section>
-        <h3 className="footer__subtitle">Social Media</h3>
-        <section className="footer__social">
-          {
-            socials && (
-              socials.map(item => (
-                <span className="footer__social__item" key={item.id}>
-                  <img
-                    src={icons[item.icon]}
-                    alt="Ikona media społecznościowe"
-                    className="footer__social__icon"
-                  />
-                  {item.nickname}
-                </span>
-              ))
-            )
-          }
-        </section>
+        {
+          content && socials
+          ? (
+            <>
+              <h2 className="footer__title">Skontaktuj się z nami.</h2>
+              <h3 className="footer__subtitle">Askay Studio</h3>
+              <section className="footer__department">
+                <h3 className="footer__department__name">Dział Graficzny</h3>
+                <span className="footer__department__text">{content?.personName1|| null}</span>
+                <span className="footer__department__text">{content?.personEmail1 || null}</span>
+                <span className="footer__department__text">{content?.personNumber1 || null}</span>
+              </section>
+              <section className="footer__department">
+                <h3 className="footer__department__name">Dział Marketingu</h3>
+                <span className="footer__department__text">{content?.personName2|| null}</span>
+                <span className="footer__department__text">{content?.personEmail2 || null}</span>
+                <span className="footer__department__text">{content?.personNumber2 || null}</span>
+              </section>
+              <h3 className="footer__subtitle">Social Media</h3>
+              <section className="footer__social">
+                {
+                  socials && (
+                    socials.map(item => (
+                      <span className="footer__social__item" key={item.id}>
+                        <img
+                          src={icons[item.icon]}
+                          alt="Ikona media społecznościowe"
+                          className="footer__social__icon"
+                        />
+                        {item.nickname}
+                      </span>
+                    ))
+                  )
+                }
+              </section>
+            </>
+          )
+          : <Loader />
+        }
       </footer>
       <div className="footer__copyright">
       <Askay className="footer__copyright__logo" />
