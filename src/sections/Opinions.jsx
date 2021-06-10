@@ -10,10 +10,10 @@ import Loader from '../components/Loader';
 
 const responsivePartners = {
   0: {
-    items: 2
+    items: 1
   },
   768: {
-    items: 3
+    items: 2
   },
   1024:{
     items: 4

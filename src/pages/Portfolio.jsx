@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Masonry from 'react-masonry-css';
 import getData from '../getData';
 import Loader from '../components/Loader';
+import {ReactComponent as TopArrow} from '../images/up-arrow.svg';
 
 import PortfolioMenu from '../components/PortfolioMenu';
 
@@ -92,6 +93,9 @@ const Portfolio = () => {
           }
         </div>
       </header>
+      <button className="portfolioPage__toTop" title={'Do góry'} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
+          <TopArrow className={'portfolioPage__toTop__icon'}/>
+      </button>
     </motion.div>
   );
 };

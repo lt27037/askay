@@ -10,11 +10,11 @@
 
 :root{
   font-size: 62.5%;
-  // scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body{
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -23,6 +23,8 @@ body{
   @include elementFlex(column, flex-start, center);
   min-height: 100vh;
   width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 @media(min-width: 1500px){

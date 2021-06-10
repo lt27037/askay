@@ -46,7 +46,9 @@
     position: static;
     padding: 0 8%;
     &__list{
-      width: 1450px;
+      width: auto;
+      padding-right: 100px;
+      justify-content: flex-start;
       &::after,
       &::before{
         content: '';

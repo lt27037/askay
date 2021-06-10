@@ -72,7 +72,6 @@ const Portfolio = () => {
       )
       : <Loader />
     }
-    
     <Button content="Zobacz więcej" />
   </section>
 );}

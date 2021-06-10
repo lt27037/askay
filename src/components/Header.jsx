@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import { NavHashLink } from 'react-router-hash-link';
 
 
 import { ReactComponent as Logo } from '../images/Askay-logo-final 1.svg';
@@ -15,7 +15,7 @@ const Header = () => {
     () => {
       setIsOpen(false);
     },
-    [history.location],
+    [history.location.pathname],
   );
 
   return (
@@ -26,20 +26,20 @@ const Header = () => {
       </button>
       <nav className="mainHeader__menu">
         <ul className="mainHeader__menu__list" style={isOpen ? { transform: 'translateX(-100%)' } : { transform: 'translateX(0)' }}>
-          <li className="mainHeader__menu__item">
-            <NavLink to="/" exact>Strona Główna</NavLink>
+          <li className="mainHeader__menu__item" onClick={() => setIsOpen(false)}>
+            <NavHashLink to="/" exact activeClassName='active'>Strona Główna</NavHashLink>
           </li>
-          <li className="mainHeader__menu__item">
+          <li className="mainHeader__menu__item" onClick={() => setIsOpen(false)}>
             <NavLink to="/portfolio/#wszystkie">Portfolio</NavLink>
           </li>
-          <li className="mainHeader__menu__item">
-            <HashLink to="/#oferta">Oferta</HashLink>
+          <li className="mainHeader__menu__item" onClick={() => setIsOpen(false)}>
+            <NavHashLink to="/#oferta" activeClassName='active'>Oferta</NavHashLink>
           </li>
-          <li className="mainHeader__menu__item">
-            <HashLink to="/#o-nas">O nas</HashLink>
+          <li className="mainHeader__menu__item" onClick={() => setIsOpen(false)}>
+            <NavHashLink to="/#o-nas" activeClassName='active'>O nas</NavHashLink>
           </li>
-          <li className="mainHeader__menu__item">
-            <HashLink to="/#kontakt">Kontakt</HashLink>
+          <li className="mainHeader__menu__item" onClick={() => setIsOpen(false)}>
+            <NavHashLink to="/#kontakt" activeClassName='active'>Kontakt</NavHashLink>
           </li>
         </ul>
       </nav>
