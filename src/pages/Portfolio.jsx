@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import  {useLocation} from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Masonry from 'react-masonry-css';
 import getData from '../getData';
+import Loader from '../components/Loader';
 
 import PortfolioMenu from '../components/PortfolioMenu';
 
@@ -10,6 +12,7 @@ import '../styles/Portfolio.scss';
 const Portfolio = () => {
   const [data, setData] = useState(null);
   const [photos, setPhotos] = useState(null);
+  const location = useLocation();
 
   useEffect(
     () => {
@@ -37,6 +40,13 @@ const Portfolio = () => {
     [data]
   )
 
+  useEffect(
+    () => {
+      console.log(location.pathname);
+    },
+    [location.pathname]
+  )
+
   const breakpointColumnsObj = {
     default: 4,
     1100: 3,
@@ -57,13 +67,16 @@ const Portfolio = () => {
         <h3 className="portfolioPage__subtitle">Zobacz nasze portfolio i przekonaj się, że warto z nami współpracować! </h3>
         <PortfolioMenu data={data || null} />
         <div className="portfolioPage__container">
-          <Masonry
+          { data
+          ? (<Masonry
             breakpointCols={breakpointColumnsObj}
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
             {photos ? photos?.map(arr => arr.images) : null}
-          </Masonry>
+          </Masonry>)
+          : <Loader />
+          }
         </div>
       </header>
     </motion.div>

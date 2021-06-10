@@ -7,11 +7,11 @@
   position: relative;
   background-image: url(../images/footer-background.png);
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100%;
+  background-position: bottom left;
+  background-size: contain;
   &__background{
     position: absolute;
-    width: 100%;
+    width: 762px;
     left: 0;
     bottom: 100px;
   }
@@ -42,21 +42,25 @@
     }
   }
   &__social{
-    display: grid;
+    @include elementFlex(row, flex-start, center);
     width: 100%;
-    row-gap: 2rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     &__item{
       @include elementFlex(row, flex-start, center);
-      width: 100%;
+      width: auto;
       height: 100%;
       color: #ffffff;
       font-size: 1.4rem;
+      &:not(:last-of-type){
+        margin-right: 100px;
+      }
     }
     &__icon{
       width: 3rem;
-      margin-right: 0.2rem;
+      height: 3rem;
+      margin-right: 10px;
+      path{
+        fill: #fff;
+      }
     }
   }
   &__copyright{

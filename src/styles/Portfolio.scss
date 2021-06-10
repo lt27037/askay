@@ -29,6 +29,7 @@
     width: 100%;
     border-radius: 20px;
     margin-bottom: 15px;
+    animation: fadeIn 0.3s forwards;
   }
 }
 
@@ -75,5 +76,14 @@
   }
   .my-masonry-grid_column{
     padding-left: 25px;
+  }
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }
