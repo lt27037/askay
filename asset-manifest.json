@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/askay/static/css/main.7804d8e3.chunk.css",
+    "main.js": "/askay/static/js/main.ca078f23.chunk.js",
+    "main.js.map": "/askay/static/js/main.ca078f23.chunk.js.map",
+    "runtime-main.js": "/askay/static/js/runtime-main.37b76d6e.js",
+    "runtime-main.js.map": "/askay/static/js/runtime-main.37b76d6e.js.map",
+    "static/css/2.4bb3bb55.chunk.css": "/askay/static/css/2.4bb3bb55.chunk.css",
+    "static/js/2.b8143b8a.chunk.js": "/askay/static/js/2.b8143b8a.chunk.js",
+    "static/js/2.b8143b8a.chunk.js.map": "/askay/static/js/2.b8143b8a.chunk.js.map",
+    "index.html": "/askay/index.html",
+    "static/css/2.4bb3bb55.chunk.css.map": "/askay/static/css/2.4bb3bb55.chunk.css.map",
+    "static/css/main.7804d8e3.chunk.css.map": "/askay/static/css/main.7804d8e3.chunk.css.map",
+    "static/js/2.b8143b8a.chunk.js.LICENSE.txt": "/askay/static/js/2.b8143b8a.chunk.js.LICENSE.txt",
+    "static/media/Askay-logo-final 1.cb1751f3.svg": "/askay/static/media/Askay-logo-final 1.cb1751f3.svg",
+    "static/media/Illustracja-desktop.34b955c6.png": "/askay/static/media/Illustracja-desktop.34b955c6.png",
+    "static/media/Illustracja_about_desktop.0f9ca274.png": "/askay/static/media/Illustracja_about_desktop.0f9ca274.png",
+    "static/media/Illustracja_wspolpraca_desktop.4895c7ed.png": "/askay/static/media/Illustracja_wspolpraca_desktop.4895c7ed.png",
+    "static/media/behance-brands.d94eb7c7.svg": "/askay/static/media/behance-brands.d94eb7c7.svg",
+    "static/media/facebook-f-brands.8f9f4d90.svg": "/askay/static/media/facebook-f-brands.8f9f4d90.svg",
+    "static/media/Footer.scss": "/askay/static/media/footer-background.b95a9394.png",
+    "static/media/instagram-brands.ade23966.svg": "/askay/static/media/instagram-brands.ade23966.svg",
+    "static/media/linkedin-in-brands.cb145401.svg": "/askay/static/media/linkedin-in-brands.cb145401.svg",
+    "static/media/napis-askay.3bef22aa.png": "/askay/static/media/napis-askay.3bef22aa.png",
+    "static/media/About.scss": "/askay/static/media/napis_about.99c21e4d.png",
+    "static/media/PortfolioSection.scss": "/askay/static/media/portfolio-section-background-desktop.65573f99.png",
+    "static/media/reload.ea30a6eb.svg": "/askay/static/media/reload.ea30a6eb.svg",
+    "static/media/Start.scss": "/askay/static/media/start-section-background.ba69feac.png",
+    "static/media/twitch-brands.746e8a2c.svg": "/askay/static/media/twitch-brands.746e8a2c.svg",
+    "static/media/twitter-brands.5058ccda.svg": "/askay/static/media/twitter-brands.5058ccda.svg",
+    "static/media/up-arrow.ce3753cb.svg": "/askay/static/media/up-arrow.ce3753cb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.37b76d6e.js",
+    "static/css/2.4bb3bb55.chunk.css",
+    "static/js/2.b8143b8a.chunk.js",
+    "static/css/main.7804d8e3.chunk.css",
+    "static/js/main.ca078f23.chunk.js"
+  ]
+}
